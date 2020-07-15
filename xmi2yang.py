@@ -1,4 +1,5 @@
-import config
+#!/usr/bin/python
+import config, umlparser
 
 def main():
     opts = config.processArgs()
@@ -14,6 +15,8 @@ def main():
     files = config.readProjectDir(opts)
     print('uml files', files)
     print('\n')
+
+    umlparser.parseFiles(files)
 
 if __name__ == "__main__":
     main()
